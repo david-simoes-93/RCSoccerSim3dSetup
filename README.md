@@ -30,3 +30,21 @@ To build a network, a Gigabit switch + NICs and CAT6 cables must be used.
 It must be possible to physically disconnect the competition network from the internet/event LAN, which must be done during matches to restrict interference. If using multiple clusters, having the ability to separate them physically may help stability, though when using NFS this means you need a mirroring file server for each cluster.
 The competition machines should have static IPs.
 
+## OS
+
+Choose a recent Linux OS that you are comfortable with, and that you know of that the simulator runs on. Most teams will be familiar with Ubuntu, other popular choice is Fedora.
+Choose a 64 bit OS.
+Have several installation methods ready, with different versions if unsure, and both on disk and on USB drive in case the machines don’t support one.
+
+During installation, give each machine a useful host name (e.g. server1, agent1, monitor1).
+
+## Installation Order
+
+Start with setting up the file-server (check `NFS.md`). On these examples, it was on the network 10.8.3.0, and with IP 10.8.3.51. You usually have a single-file server (even with multiple clusters), unless there is a large amount of teams.
+
+Then set up the server (check `Server.md`). On these examples, it had IP 10.8.3.51 (same as the NFS server).
+
+Next are the clients (check `Client.md`). On these examples, they had IPs 10.8.3.52 and 10.8.3.54.
+
+Finally, the viewer (check `Viewer.md`). On these examples, it had IP 10.8.3.53.
+
