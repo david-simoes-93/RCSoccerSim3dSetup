@@ -31,8 +31,19 @@ RoboViz is the preferred visualizer, install it on the visualization machine(s).
 	mv ../bin/linux-amd64 ../../Roboviz
 	cd ../../Roboviz
 	nano config.txt
-		Bloom         : false
-		Server Hosts  : 10.8.3.51
+		Server Hosts         : 10.8.3.51
+		Field Overlay        : true
+		Number of Players    : true
+		Player IDs           : true
+
+If necessary, turn off graphical options for better speed.
+
+	nano config.txt
+		Bloom                : false
+		Phong                : false
+		Shadows              : false
+		Soft Shadows         : false
+
 
 ## League Manager
 
