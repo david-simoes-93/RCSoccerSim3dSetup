@@ -1,5 +1,5 @@
 
-# Set-Up -- CLIENTS
+# Client Set-Up
 
 ## Configuration
 

@@ -73,18 +73,14 @@ To ensure the machine is running at peak performance, enable performance mode.
 
 ## Preparing Rounds
 
-Now, for each round, do the following:
+Now, to test each team, do the following (this example uses FCPortugal3d):
 
 	rclm2 test_round
 	cd test_round
 	./script/init 3Dspark
 	edit teams
-		[ enter list of teams in this group, by their username, one on each line; save & exit]
 		FCPortugal3d
-		BahiaRT
-		magmaOffenburg
-		KgpKubs
-		UTAustinVilla
-		ITAndroids
-		Miracle3D
+		TestTeam
 	./script/schedule/init teams
+
+For actual rounds, in the `teams` file, write the round's participating team usernames, one per line.
