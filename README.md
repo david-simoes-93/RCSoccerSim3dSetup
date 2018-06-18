@@ -48,4 +48,4 @@ Next are the clients (check `Client.md`). On these examples, they had IPs 10.8.3
 
 Finally, the viewer (check `Viewer.md`). On these examples, it had IP 10.8.3.53.
 
-To run rounds, follow the instructions on `Running Rounds.md.
+To run rounds, follow the instructions on `Running Rounds.md`.
