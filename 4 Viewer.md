@@ -65,11 +65,21 @@ Make and install:
 
 ## Performance mode
 
-To ensure the machine is running at peak performance, enable performance mode.
+To ensure the machine is running at peak performance, enable performance mode. For an 8-core machine, this did the trick:
+
+    for i in {0..7}; do echo performance > /sys/devices/system/cpu${i}/cpufreq/scaling_governor; done
+
+This does not seem to work:
 
 	sudo apt install cpufrequtils
 	sudoedit /etc/init.d/cpufrequtils
 		GOVERNOR="performance"
+
+We're not sure how to make this work upon reboot.
+
+## GPU
+
+Remember to install GPU drivers. When Roboviz starts, you can read the `-Renderer` line to see what it is using to render. For NVidia drivers, go to `System Settings` > `Software & Updates` > `Ubuntu Software` > `Download from: Main Server` and close. Reload the differences when asked. Then, `System Settings` > `Software & Updates` > `Additional Drivers` and enable the proprietary NVidia drivers.
 
 ## Preparing Rounds
 

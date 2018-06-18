@@ -39,12 +39,17 @@ If you prefer to do it manually, for all teams set account and a disabled passwo
 
 ## Performance mode
 
-To ensure the machine is running at peak performance, enable performance mode.
+To ensure the machine is running at peak performance, enable performance mode. For an 8-core machine, this did the trick:
+
+    for i in {0..7}; do echo performance > /sys/devices/system/cpu${i}/cpufreq/scaling_governor; done
+
+This does not seem to work:
 
 	sudo apt install cpufrequtils
 	sudoedit /etc/init.d/cpufrequtils
 		GOVERNOR="performance"
 
+We're not sure how to make this work upon reboot.
 ## Closing Home Directories
 
 Set up log directories for each team by running the `nfsMakeLogFolders.sh` script. Now when teams log to this directory, the output is written to the current machine, not to NFS.
