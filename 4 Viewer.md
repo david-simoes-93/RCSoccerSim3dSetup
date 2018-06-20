@@ -67,7 +67,7 @@ Make and install:
 
 To ensure the machine is running at peak performance, enable performance mode. For an 8-core machine, this did the trick:
 
-    for i in {0..7}; do echo performance > /sys/devices/system/cpu${i}/cpufreq/scaling_governor; done
+    for i in {0..7}; do echo performance > /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_governor; done
 
 This does not seem to work:
 
@@ -76,6 +76,14 @@ This does not seem to work:
 		GOVERNOR="performance"
 
 We're not sure how to make this work upon reboot.
+
+## Looks
+
+Go to `System Settings` > `Brightness & Lock` and disable the `Dim screen` and `Turn screen off` options.
+
+Go to `System Settings` > `Appearance` > `Behavior` and enable the Launcher `Auto-Hide` option.
+
+If necessary, adjust the resolution of the Roboviz screen, with `System Settings` > `Displays` and changing resolutions as required (1920 by 1080 seems to work well).
 
 ## GPU
 

@@ -68,7 +68,7 @@ When agents write a lot of logging to a team's home directory they will slow dow
 
 To ensure the machine is running at peak performance, enable performance mode. For an 8-core machine, this did the trick:
 
-    for i in {0..7}; do echo performance > /sys/devices/system/cpu${i}/cpufreq/scaling_governor; done
+    for i in {0..7}; do echo performance > /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_governor; done
 
 This does not seem to work:
 
