@@ -1,10 +1,17 @@
 # File Server Set-Up
 
+Start with the simple stuff
+
+        sudo apt update
+        sudo apt install git -y
+	git clone https://github.com/bluemoon93/RCSoccerSim3dSetup
+	chmod +x RCSoccerSim3dSetup/scripts/*.sh 
+
 ## NFS
 
 NFS is used to make home directories available on all machines. Follow the [Quick-Start](https://help.ubuntu.com/community/SettingUpNFSHowTo) steps.
 
-	sudo apt install nfs-kernel-server
+	sudo apt install nfs-kernel-server -y
 	sudo mkdir /home/teams
 	sudo mkdir -p /export/users
 	sudo chmod 777 /export
@@ -49,7 +56,7 @@ To ensure the machine is running at peak performance, enable performance mode. F
 
 This does not seem to work:
 
-	sudo apt install cpufrequtils
+	sudo apt install cpufrequtils -y
 	sudoedit /etc/init.d/cpufrequtils
 		GOVERNOR="performance"
 
