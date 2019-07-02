@@ -5,7 +5,9 @@
 Start with basics.
 
 	sudo apt update
-	sudo apt install openssh-server
+	sudo apt install openssh-server git -y
+	git clone https://github.com/bluemoon93/RCSoccerSim3dSetup
+	chmod +x RCSoccerSim3dSetup/scripts/*.sh 
 
 The League Manager uses the root account to log into the different machines. Ubuntu by default disables this account, to enable it give it a password by running:
 
@@ -26,11 +28,11 @@ Press `Return` on all questions to select the default values, and to choose not 
 
 Main installation instructions are found [here](http://simspark.sourceforge.net/wiki/index.php/Installation_on_Linux#Requirement). The following are a reproduction of these, with some additions specific to running a competition. This should be done on all server machines. Install dependency packages.
 
-	sudo apt install build-essential subversion git cmake libfreetype6-dev libsdl1.2-dev ruby ruby-dev libdevil-dev libboost-dev libboost-thread-dev libboost-regex-dev libboost-system-dev qt4-default
+	sudo apt install build-essential subversion git cmake libfreetype6-dev libsdl1.2-dev ruby ruby-dev libdevil-dev libboost-dev libboost-thread-dev libboost-regex-dev libboost-system-dev qt4-default -y
 
 Install multi-threaded ODE:
 
-	sudo apt install autogen automake libtool libtbb-dev
+	sudo apt install autogen automake libtool libtbb-dev -y
 	git clone https://github.com/sgvandijk/ode-tbb.git
 	cd ode-tbb
 	./autogen.sh
@@ -73,7 +75,7 @@ To ensure the machine is running at peak performance, enable performance mode. F
 
 This does not seem to work:
 
-	sudo apt install cpufrequtils
+	sudo apt install cpufrequtils -y
 	sudoedit /etc/init.d/cpufrequtils
 		GOVERNOR="performance"
 
