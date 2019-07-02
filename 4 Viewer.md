@@ -6,6 +6,9 @@
 Start with basics.
 
 	sudo apt update
+	sudo apt install git -y
+	git clone https://github.com/bluemoon93/RCSoccerSim3dSetup
+	chmod +x RCSoccerSim3dSetup/scripts/*.sh 
 
 If you defined useful hostnames on each machine, list them and their IP addresses in `/etc/hosts`. Enable ssh passwordless login.
 
@@ -22,9 +25,9 @@ where you select the right hostname.
 
 RoboViz is the preferred visualizer, install it on the visualization machine(s). Full installation and usage instructions are on its [homepage](https://github.com/magmaOffenburg/RoboViz):
 
-	sudo add-apt-repository ppa:webupd8team/java
-	sudo apt-get update
-	sudo apt-get install oracle-java8-installer
+	sudo add-apt-repository ppa:openjdk-r/ppa
+        sudo apt update
+        sudo apt install openjdk-8-jdk -y
 	git clone https://github.com/magmaOffenburg/RoboViz/
 	cd RoboViz/scripts
 	./build-linux64.sh
@@ -59,9 +62,11 @@ Obtain a copy of the latest [League Manager](https://gitlab.com/robocup-sim/rclm
 
 Make and install:
 
-	sudo apt-get install dh-autoreconf libboost-dev ruby
+	sudo apt install dh-autoreconf libboost-dev ruby -y
 	./bootstrap
-	./configure && make && sudo make install
+	./configure
+	make -j8
+	sudo make install
 
 ## Performance mode
 
@@ -71,7 +76,7 @@ To ensure the machine is running at peak performance, enable performance mode. F
 
 This does not seem to work:
 
-	sudo apt install cpufrequtils
+	sudo apt install cpufrequtils -y
 	sudoedit /etc/init.d/cpufrequtils
 		GOVERNOR="performance"
 
