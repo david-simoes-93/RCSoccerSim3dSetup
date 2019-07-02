@@ -47,6 +47,8 @@ If you prefer to do it manually, for all teams set account and a disabled passwo
 	sudo useradd AIUT3D -m -b /home/teams
 	sudo useradd WrightOcean -m -b /home/teams
 	sudo useradd BehRobots -m -b /home/teams
+	cd /home/teams
+	sudo chmod og-rwx *
 
 ## Performance mode
 
