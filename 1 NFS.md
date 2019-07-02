@@ -36,6 +36,10 @@ If you prefer to do it manually, for all teams set account and a disabled passwo
 	sudo useradd magmaOffenburg -m -b /home/teams
 	sudo useradd Miracle3D -m -b /home/teams
 	sudo useradd UTAustinVilla -m -b /home/teams
+	sudo useradd HFUTEngine -m -b /home/teams
+	sudo useradd AIUT3D -m -b /home/teams
+	sudo useradd WrightOcean -m -b /home/teams
+	sudo useradd BehRobots -m -b /home/teams
 
 ## Performance mode
 
