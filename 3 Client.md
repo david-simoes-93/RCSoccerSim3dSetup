@@ -59,6 +59,14 @@ If you prefer to do it manually, for all teams set account and a password equal 
 	echo Miracle3D:Miracle3D | sudo chpasswd
 	sudo useradd UTAustinVilla -b /home/teams	
 	echo UTAustinVilla:UTAustinVilla | sudo chpasswd
+	sudo useradd HFUTEngine -b /home/teams	
+	echo UTAustinVilla:HFUTEngine | sudo chpasswd
+	sudo useradd AIUT3D -b /home/teams	
+	echo UTAustinVilla:AIUT3D | sudo chpasswd
+	sudo useradd WrightOcean -b /home/teams	
+	echo UTAustinVilla:WrightOcean | sudo chpasswd
+	sudo useradd BehRobots -b /home/teams	
+	echo UTAustinVilla:BehRobots | sudo chpasswd
 
 ## Closing Home Directories
 
