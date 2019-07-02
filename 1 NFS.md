@@ -4,8 +4,8 @@ Start with the simple stuff
 
         sudo apt update
         sudo apt install git -y
-	git clone https://github.com/bluemoon93/RCSoccerSim3dSetup
-	chmod +x RCSoccerSim3dSetup/scripts/*.sh 
+        git clone https://github.com/bluemoon93/RCSoccerSim3dSetup
+        chmod +x RCSoccerSim3dSetup/scripts/*.sh 
 
 ## NFS
 
