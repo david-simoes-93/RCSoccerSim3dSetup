@@ -26,8 +26,8 @@ where you select the right hostname.
 RoboViz is the preferred visualizer, install it on the visualization machine(s). Full installation and usage instructions are on its [homepage](https://github.com/magmaOffenburg/RoboViz):
 
 	sudo add-apt-repository ppa:openjdk-r/ppa
-        sudo apt update
-        sudo apt install openjdk-8-jdk -y
+	sudo apt update
+	sudo apt install openjdk-8-jdk -y
 	git clone https://github.com/magmaOffenburg/RoboViz/
 	cd RoboViz/scripts
 	./build-linux64.sh
