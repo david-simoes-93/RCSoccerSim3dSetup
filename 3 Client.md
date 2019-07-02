@@ -92,7 +92,7 @@ We're not sure how to make this work upon reboot.
 
 Download and extract the rcssserver proxy onto the client machines from [here](https://github.com/magmaOffenburg/magmaProxy):
 
-	sudo add-apt-repository ppa:openjdk-r/ppa
+	sudo add-apt-repository ppa:openjdk-r/ppa -y
 	sudo apt update
 	sudo apt install openjdk-8-jdk -y
 	git clone https://github.com/magmaOffenburg/magmaProxy
