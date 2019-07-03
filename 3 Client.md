@@ -31,9 +31,9 @@ NFS is used to make home directories available on all machines. Follow the [Quic
 
 	sudo apt install nfs-common -y
 	sudo mkdir /home/teams
-	sudo mount -t nfs -o nolock,proto=tcp,port=2049 10.8.3.51:/users /home/teams
 	sudo nano /etc/fstab
 		10.8.3.51:/users    /home/teams    nfs    auto,nolock    0    0
+	sudo mount /home/teams
 
 The `nolock` option prevents lockups. Other mount options that you may try setting are `rsize` and `wsize` to set read and write block size, where larger values may speed up things. Also see [this](http://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-nfs-client-config-options.html) and check `man nfs` to see which defaults are already used. The most important way to get NFS stable however is to prevent any writing, as discussed below.
 
