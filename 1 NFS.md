@@ -62,7 +62,7 @@ This does not seem to work:
 
 We're not sure how to make this work upon reboot.
 
-## Closing Home Directories
+## Setting up Home Directories
 
 Set up log directories for each team by running the `nfsMakeLogFolders.sh` script. Now when teams log to this directory, the output is written to the current machine, not to NFS.
 
