@@ -6,8 +6,6 @@ Start with basics.
 
 	sudo apt update
 	sudo apt install openssh-server git -y
-	git clone https://github.com/bluemoon93/RCSoccerSim3dSetup
-	chmod +x RCSoccerSim3dSetup/scripts/*.sh 
 
 The League Manager uses the root account to log into the different machines. Ubuntu by default disables this account, to enable it give it a password by running:
 
