@@ -8,14 +8,6 @@ Start with basics.
 	sudo apt update
 	sudo apt install git -y
 
-Define useful hostnames on each machine by listing them and their IP addresses in `/etc/hosts`. These are optional, just a commodity for easy access, assuming you will be working on the monitor station.
-
-    10.8.3.51 cl1-server
-    10.8.3.52 cl1-client1
-    10.8.3.54 cl1-client2
-    10.8.3.55 cl1-monitor
-    10.8.3.51 cl1-nfs
-
 Enable ssh passwordless login.
 
 	ssh-keygen
