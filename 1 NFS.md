@@ -23,8 +23,8 @@ Then edit some files to keep these directories exported even after a reboot.
 	sudoedit /etc/fstab
 		/home/teams    /export/users   none    bind  0  0
 	sudoedit /etc/exports
-		/export       10.8.3.0/24(rw,fsid=0,insecure,no_subtree_check,async)
-		/export/users 10.8.3.0/24(rw,nohide,insecure,no_subtree_check,async)
+		/export       10.8.3.0/24(rw,fsid=0,insecure,no_subtree_check,async,no_root_squash)
+		/export/users 10.8.3.0/24(rw,nohide,insecure,no_subtree_check,async,no_root_squash)
 
 ## Accounts (NIS / Manually)
 
