@@ -7,8 +7,6 @@ Start with basics.
 
 	sudo apt update
 	sudo apt install git openssh-server -y
-	git clone https://github.com/bluemoon93/RCSoccerSim3dSetup
-	chmod +x RCSoccerSim3dSetup/scripts/*.sh 
 
 The League Manager uses the root account to log into the different machines. Ubuntu by default disables this account, to enable it give it a password by running:
 
@@ -73,6 +71,10 @@ If you prefer to do it manually, for all teams set account and a password equal 
 ## Closing Home Directories
 
 When agents write a lot of logging to a team's home directory they will slow down NFS and the network significantly. To prevent this, you should disable writing before each round. Set up log directories for each team on the client machines by running the script `clientMakeLogFolders.sh`.
+
+    git clone https://github.com/bluemoon93/RCSoccerSim3dSetup
+    chmod +x RCSoccerSim3dSetup/scripts/*.sh 
+    RCSoccerSim3dSetup/scripts/clientMakeLogFolders.sh
 
 ## Performance mode
 
