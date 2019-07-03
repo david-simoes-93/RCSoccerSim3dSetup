@@ -3,9 +3,6 @@
 Start with the simple stuff
 
     sudo apt update
-    sudo apt install git -y
-    git clone https://github.com/bluemoon93/RCSoccerSim3dSetup
-    chmod +x RCSoccerSim3dSetup/scripts/*.sh 
 
 ## NFS
 
@@ -67,5 +64,10 @@ We're not sure how to make this work upon reboot.
 ## Closing Home Directories
 
 Set up log directories for each team by running the `nfsMakeLogFolders.sh` script. Now when teams log to this directory, the output is written to the current machine, not to NFS.
+
+    sudo apt install git -y
+    git clone https://github.com/bluemoon93/RCSoccerSim3dSetup
+    chmod +x RCSoccerSim3dSetup/scripts/*.sh 
+    RCSoccerSim3dSetup/scripts/nfsMakeLogFolders.sh
 
 At every code upload deadline (before each round), you should disable writing to the home directory. Simply run `nfsCloseHomes.sh` to close, and re-open them with `nfsOpenHomes.sh`. Dont worry about errors on removing permissions from the log file.
