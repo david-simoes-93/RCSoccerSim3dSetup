@@ -3,6 +3,7 @@
 Start with the simple stuff
 
     sudo apt update
+    sudo apt install openssh-server -y
 
 ## NFS
 
