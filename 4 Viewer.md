@@ -7,10 +7,16 @@ Start with basics.
 
 	sudo apt update
 	sudo apt install git -y
-	git clone https://github.com/bluemoon93/RCSoccerSim3dSetup
-	chmod +x RCSoccerSim3dSetup/scripts/*.sh 
 
-If you defined useful hostnames on each machine, list them and their IP addresses in `/etc/hosts`. Enable ssh passwordless login.
+Define useful hostnames on each machine by listing them and their IP addresses in `/etc/hosts`. These are optional, just a commodity for easy access, assuming you will be working on the monitor station.
+
+    10.8.3.51 cl1-server
+    10.8.3.52 cl1-client1
+    10.8.3.54 cl1-client2
+    10.8.3.55 cl1-monitor
+    10.8.3.51 cl1-nfs
+
+Enable ssh passwordless login.
 
 	ssh-keygen
 
@@ -94,16 +100,3 @@ If necessary, adjust the resolution of the Roboviz screen, with `System Settings
 
 Remember to install GPU drivers. When Roboviz starts, you can read the `-Renderer` line to see what it is using to render. For NVidia drivers, go to `System Settings` > `Software & Updates` > `Ubuntu Software` > `Download from: Main Server` and close. Reload the differences when asked. Then, `System Settings` > `Software & Updates` > `Additional Drivers` and enable the proprietary NVidia drivers.
 
-## Preparing Rounds
-
-Now, to test each team, do the following (this example uses FCPortugal3d):
-
-	rclm2 test_round
-	cd test_round
-	./script/init 3Dspark
-	edit teams
-		FCPortugal3d
-		TestTeam
-	./script/schedule/init teams
-
-For actual rounds, in the `teams` file, write the round's participating team usernames, one per line.
